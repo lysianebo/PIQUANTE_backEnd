@@ -1,0 +1,38 @@
+{
+    "sourceFile": "models/User.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1680520151128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680521285443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,5 +7,5 @@\n });\n \n userSchema.plugin(uniqueValidator);\n \n-module.exports = mongoose.model('User', userSchema);\n\\ No newline at end of file\n+module.exports = mongoose.model('User', userSchema);\n"
+                },
+                {
+                    "date": 1680521305208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,4 +8,5 @@\n \n userSchema.plugin(uniqueValidator);\n \n module.exports = mongoose.model('User', userSchema);\n+console.log(\"routes sauceddds\")\n"
+                },
+                {
+                    "date": 1680521325259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,4 @@\n \n userSchema.plugin(uniqueValidator);\n \n module.exports = mongoose.model('User', userSchema);\n-console.log(\"routes sauceddds\")\n"
+                },
+                {
+                    "date": 1680532961812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n const uniqueValidator = require('mongoose-unique-validator');\n \n const userSchema = mongoose.Schema({\n   email: { type: String, required: true, unique: true },\n-  password: { type: String, required: true }\n+  password: { type: String, required: true },\n });\n \n userSchema.plugin(uniqueValidator);\n \n"
+                },
+                {
+                    "date": 1680593643554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n const uniqueValidator = require('mongoose-unique-validator');\n \n const userSchema = mongoose.Schema({\n   email: { type: String, required: true, unique: true },\n-  password: { type: String, required: true },\n+  password: { type: String, required: true }\n });\n \n userSchema.plugin(uniqueValidator);\n \n"
+                }
+            ],
+            "date": 1680520151128,
+            "name": "Commit-0",
+            "content": "const mongoose = require('mongoose');\nconst uniqueValidator = require('mongoose-unique-validator');\n\nconst userSchema = mongoose.Schema({\n  email: { type: String, required: true, unique: true },\n  password: { type: String, required: true }\n});\n\nuserSchema.plugin(uniqueValidator);\n\nmodule.exports = mongoose.model('User', userSchema);"
+        }
+    ]
+}

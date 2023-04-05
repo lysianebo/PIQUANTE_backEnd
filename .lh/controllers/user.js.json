@@ -1,0 +1,66 @@
+{
+    "sourceFile": "controllers/user.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1680521444199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680521455066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,5 +40,5 @@\n                 .catch(error => res.status(500).json({ error }));\n         })\n         .catch(error => res.status(500).json({ error }));\n  };\n- \n\\ No newline at end of file\n+ console.log(\"routes saufgfgfggfceddds\")\n"
+                },
+                {
+                    "date": 1680521485177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,5 +40,4 @@\n                 .catch(error => res.status(500).json({ error }));\n         })\n         .catch(error => res.status(500).json({ error }));\n  };\n- console.log(\"routes saufgfgfggfceddds\")\n"
+                },
+                {
+                    "date": 1680532192242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     bcrypt.hash(req.body.password, 10)\n       .then(hash => {\n         const user = new User({\n           email: req.body.email,\n-          password: hash\n+          password: hash,\n         });\n         user.save()\n           .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))\n           .catch(error => res.status(400).json({ error }));\n"
+                },
+                {
+                    "date": 1680532287733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,11 @@\n           password: hash,\n         });\n         user.save()\n           .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))\n-          .catch(error => res.status(400).json({ error }));\n-      })\n-      .catch(error => res.status(500).json({ error }));\n+    //       .catch(error => res.status(400).json({ error }));\n+    //   })\n+    //   .catch(error => res.status(500).json({ error }));\n   };\n \n   exports.login = (req, res, next) => {\n     User.findOne({ email: req.body.email })\n"
+                },
+                {
+                    "date": 1680532310463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n           password: hash,\n         });\n         user.save()\n           .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))\n+          \n     //       .catch(error => res.status(400).json({ error }));\n     //   })\n     //   .catch(error => res.status(500).json({ error }));\n   };\n"
+                },
+                {
+                    "date": 1680532771007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,19 @@\n     bcrypt.hash(req.body.password, 10)\n       .then(hash => {\n         const user = new User({\n           email: req.body.email,\n-          password: hash,\n+          password: hash\n         });\n         user.save()\n           .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))\n-          \n+          .catch((error) => {\n+            res.status(400).json({ error: 'Paire Identifiant/mot de passe incorrect !' });\n+        });\n+})\n+.catch((error) => {\n+    res.status(500).json({ error });\n+});\n     //       .catch(error => res.status(400).json({ error }));\n     //   })\n     //   .catch(error => res.status(500).json({ error }));\n   };\n"
+                },
+                {
+                    "date": 1680533066443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         });\n         user.save()\n           .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))\n           .catch((error) => {\n-            res.status(400).json({ error: 'Paire Identifiant/mot de passe incorrect !' });\n+            res.status(400).json({ error: 'Paire Identifi:!!:ant/mot de passe incorrect !' });\n         });\n })\n .catch((error) => {\n     res.status(500).json({ error });\n"
+                },
+                {
+                    "date": 1680533109097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         });\n         user.save()\n           .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))\n           .catch((error) => {\n-            res.status(400).json({ error: 'Paire Identifi:!!:ant/mot de passe incorrect !' });\n+            res.status(400).json({ error: 'Paire Identifiant/mot de passe incorrect !' });\n         });\n })\n .catch((error) => {\n     res.status(500).json({ error });\n"
+                },
+                {
+                    "date": 1680593810114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,17 +8,17 @@\n         const user = new User({\n           email: req.body.email,\n           password: hash\n         });\n-        user.save()\n-          .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))\n-          .catch((error) => {\n-            res.status(400).json({ error: 'Paire Identifiant/mot de passe incorrect !' });\n-        });\n-})\n-.catch((error) => {\n-    res.status(500).json({ error });\n-});\n+//         user.save()\n+//           .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))\n+//           .catch((error) => {\n+//             res.status(400).json({ error: 'Paire Identifiant/mot de passe incorrect !' });\n+//         });\n+// })\n+// .catch((error) => {\n+//     res.status(500).json({ error });\n+// });\n     //       .catch(error => res.status(400).json({ error }));\n     //   })\n     //   .catch(error => res.status(500).json({ error }));\n   };\n"
+                },
+                {
+                    "date": 1680593829640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n         const user = new User({\n           email: req.body.email,\n           password: hash\n         });\n+        \n //         user.save()\n //           .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))\n //           .catch((error) => {\n //             res.status(400).json({ error: 'Paire Identifiant/mot de passe incorrect !' });\n"
+                },
+                {
+                    "date": 1680609512399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,13 @@\n         const user = new User({\n           email: req.body.email,\n           password: hash\n         });\n-        \n+        user.save()\n+        .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))\n+        .catch(error => res.status(400).json({ error }))\n+    })\n+    .catch(error => res.status(500).json({ error }))\n //         user.save()\n //           .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))\n //           .catch((error) => {\n //             res.status(400).json({ error: 'Paire Identifiant/mot de passe incorrect !' });\n"
+                },
+                {
+                    "date": 1680611012476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n                         //token:'TOKEN'\n                         token: jwt.sign(\n                              { userId: user._id },\n                              'RANDOM_TOKEN_SECRET',\n-                            { expiresIn: '24h' }\n+                            { expiresIn: 'h' }\n                          )\n                     });\n                 })\n                 .catch(error => res.status(500).json({ error }));\n"
+                }
+            ],
+            "date": 1680521444199,
+            "name": "Commit-0",
+            "content": "const bcrypt = require('bcrypt')\nconst jwt = require('jsonwebtoken');\nconst User = require('../models/User')\n\nexports.signup = (req, res, next) => {\n    bcrypt.hash(req.body.password, 10)\n      .then(hash => {\n        const user = new User({\n          email: req.body.email,\n          password: hash\n        });\n        user.save()\n          .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))\n          .catch(error => res.status(400).json({ error }));\n      })\n      .catch(error => res.status(500).json({ error }));\n  };\n\n  exports.login = (req, res, next) => {\n    User.findOne({ email: req.body.email })\n        .then(user => {\n            if (!user) {\n                return res.status(401).json({ message: 'Paire login/mot de passe incorrecte'});\n            }\n            bcrypt.compare(req.body.password, user.password)\n                .then(valid => {\n                    if (!valid) {\n                        return res.status(401).json({ message: 'Paire login/mot de passe incorrecte' });\n                    }\n                    res.status(200).json({\n                        userId: user._id,\n                        //token:'TOKEN'\n                        token: jwt.sign(\n                             { userId: user._id },\n                             'RANDOM_TOKEN_SECRET',\n                            { expiresIn: '24h' }\n                         )\n                    });\n                })\n                .catch(error => res.status(500).json({ error }));\n        })\n        .catch(error => res.status(500).json({ error }));\n };\n "
+        }
+    ]
+}

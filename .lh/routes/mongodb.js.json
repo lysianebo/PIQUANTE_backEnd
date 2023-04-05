@@ -1,0 +1,170 @@
+{
+    "sourceFile": "routes/mongodb.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 38,
+            "patches": [
+                {
+                    "date": 1680599691669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680599856862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const { MongoClient, ServerApiVersion } = require('mongodb');\n-const uri = \"mongodb+srv://lysianeboisnel:<password>@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n+const uri = \"mongodb+srv://lysianeboisnel:@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680599867484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const { MongoClient, ServerApiVersion } = require('mongodb');\n-const uri = \"mongodb+srv://lysianeboisnel:@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n+const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680599901190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const { MongoClient, ServerApiVersion } = require('mongodb');\n+const mo;\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n"
+                },
+                {
+                    "date": 1680599912772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const mo;\n+const mongoose = require;\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n"
+                },
+                {
+                    "date": 1680599920413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-const mongoose = require;\n+const mongoose = require(\"mongoose\");\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n"
+                },
+                {
+                    "date": 1680599962370,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n const mongoose = require(\"mongoose\");\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n+\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680599968080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n const mongoose = require(\"mongoose\");\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n+\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680599981450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const mongoose = require(\"mongoose\");\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n-\n+m\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680599994703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const mongoose = require(\"mongoose\");\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n-m\n+mongoose.connect\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680600005003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const mongoose = require(\"mongoose\");\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n-mongoose.connect\n+mongoose.connect(uri).then\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680600013268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const mongoose = require(\"mongoose\");\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n-mongoose.connect(uri).then\n+mongoose.connect(uri).then(())\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680600024837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const mongoose = require(\"mongoose\");\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n-mongoose.connect(uri).then(())\n+mongoose.connect(uri).then((()))\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680600038806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const mongoose = require(\"mongoose\");\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n-mongoose.connect(uri).then((()))\n+mongoose.connect(uri).then((()=))\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680600046685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const mongoose = require(\"mongoose\");\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n-mongoose.connect(uri).then((()=))\n+mongoose.connect(uri).then((()=> consolog))\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680600052516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const mongoose = require(\"mongoose\");\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n-mongoose.connect(uri).then((()=> consolog))\n+mongoose.connect(uri).then((()=> console.log))\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680600058397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const mongoose = require(\"mongoose\");\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n-mongoose.connect(uri).then((()=> console.log))\n+mongoose.connect(uri).then((()=> console.log()))\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680600069579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const mongoose = require(\"mongoose\");\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n-mongoose.connect(uri).then((()=> console.log()))\n+mongoose.connect(uri).then((()=> console.log(Connecté)))\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680600074967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const mongoose = require(\"mongoose\");\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n-mongoose.connect(uri).then((()=> console.log(Connecté)))\n+mongoose.connect(uri).then((()=> console.log(Connecté à Mon)))\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680600093231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const mongoose = require(\"mongoose\");\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n-mongoose.connect(uri).then((()=> console.log(Connecté à Mon)))\n+mongoose.connect(uri).then((()=> console.log(Connecté à Mongo)))\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680600149295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n const mongoose = require(\"mongoose\");\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n-mongoose.connect(uri).then((()=> console.log(Connecté à Mongo)))\n+mongoose.connect(uri).then(() => console.log('Connexion à MongoDB réussie !'))\n+.catch(() => console.log('Connexion à MongoDB échouée !'));\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680600191876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,10 @@\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose.connect(uri).then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n+\n+\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680605698240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n const mongoose = require(\"mongoose\");\n+\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose.connect(uri).then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n"
+                },
+                {
+                    "date": 1680605706954,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const mongoose = require(\"mongoose\");\n-\n+const password = \n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose.connect(uri).then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n"
+                },
+                {
+                    "date": 1680605720603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const mongoose = require(\"mongoose\");\n-const password = \n+const password = sSXYhGvNH6HDlNQ\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose.connect(uri).then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n"
+                },
+                {
+                    "date": 1680605734551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const mongoose = require(\"mongoose\");\n const password = sSXYhGvNH6HDlNQ\n-const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n+const uri = \"mongodb+srv://lysianeboisnel:$sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose.connect(uri).then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n \n"
+                },
+                {
+                    "date": 1680605740057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const mongoose = require(\"mongoose\");\n const password = sSXYhGvNH6HDlNQ\n-const uri = \"mongodb+srv://lysianeboisnel:$sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n+const uri = \"mongodb+srv://lysianeboisnel:${sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose.connect(uri).then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n \n"
+                },
+                {
+                    "date": 1680605745433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const mongoose = require(\"mongoose\");\n const password = sSXYhGvNH6HDlNQ\n-const uri = \"mongodb+srv://lysianeboisnel:${sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n+const uri = \"mongodb+srv://lysianeboisnel:${passosSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose.connect(uri).then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n \n"
+                },
+                {
+                    "date": 1680605752632,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const mongoose = require(\"mongoose\");\n const password = sSXYhGvNH6HDlNQ\n-const uri = \"mongodb+srv://lysianeboisnel:${passosSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n+const uri = \"mongodb+srv://lysianeboisnel:${passwordr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose.connect(uri).then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n \n"
+                },
+                {
+                    "date": 1680605758819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const mongoose = require(\"mongoose\");\n const password = sSXYhGvNH6HDlNQ\n-const uri = \"mongodb+srv://lysianeboisnel:${passwordr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n+const uri = \"mongodb+srv://lysianeboisnel:${password}r@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose.connect(uri).then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n \n"
+                },
+                {
+                    "date": 1680605771116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n const mongoose = require(\"mongoose\");\n const password = sSXYhGvNH6HDlNQ\n const uri = \"mongodb+srv://lysianeboisnel:${password}r@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n-mongoose.connect(uri).then(() => console.log('Connexion à MongoDB réussie !'))\n+mongoose\n+.connect(uri).then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n \n \n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n"
+                },
+                {
+                    "date": 1680605776593,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n const password = sSXYhGvNH6HDlNQ\n const uri = \"mongodb+srv://lysianeboisnel:${password}r@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose\n-.connect(uri).then(() => console.log('Connexion à MongoDB réussie !'))\n+.connect(uri)\n+.then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n \n \n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n"
+                },
+                {
+                    "date": 1680605842201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,10 @@\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n \n \n+\n+\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680605857703,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,11 @@\n .connect(uri)\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n \n+module.exports =\n \n \n-\n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n   const collection = client.db(\"test\").collection(\"devices\");\n   // perform actions on the collection object\n"
+                },
+                {
+                    "date": 1680605864086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n .connect(uri)\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n \n-module.exports =\n+module.exports = {}\n \n \n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n"
+                },
+                {
+                    "date": 1680605885639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n .connect(uri)\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n \n-module.exports = {}\n+module.exports = {mongoose\n \n \n const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n client.connect(err => {\n"
+                },
+                {
+                    "date": 1680605902570,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,7 @@\n .connect(uri)\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n \n-module.exports = {mongoose\n+module.exports = mongoose\n \n \n-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\n-client.connect(err => {\n-  const collection = client.db(\"test\").collection(\"devices\");\n-  // perform actions on the collection object\n-  client.close();\n\\ No newline at end of file\n-});\n"
+                },
+                {
+                    "date": 1680606052958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n-const mongoose = require(\"mongoose\");\n-const password = sSXYhGvNH6HDlNQ\n+const mongoose = require('mongoose');const password = sSXYhGvNH6HDlNQ\n const uri = \"mongodb+srv://lysianeboisnel:${password}r@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose\n .connect(uri)\n"
+                },
+                {
+                    "date": 1680606084197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n-const mongoose = require('mongoose');const password = sSXYhGvNH6HDlNQ\n+const mongoose = require('mongoose');\n+const password = sSXYhGvNH6HDlNQ\n const uri = \"mongodb+srv://lysianeboisnel:${password}r@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose\n .connect(uri)\n"
+                }
+            ],
+            "date": 1680599691669,
+            "name": "Commit-0",
+            "content": "const { MongoClient, ServerApiVersion } = require('mongodb');\nconst uri = \"mongodb+srv://lysianeboisnel:<password>@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\nconst client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });\nclient.connect(err => {\n  const collection = client.db(\"test\").collection(\"devices\");\n  // perform actions on the collection object\n  client.close();\n});"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "sourceFile": "mongodb.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1680606560651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680606686732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const mongoose = require('mongoose');\n-const password = \"sSXYhGvNH6HDlNQ\n+const password = \"sSXYhGvNH6HDlNQr\"\n const uri = \"mongodb+srv://lysianeboisnel:${password}r@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose\n .connect(uri)\n"
+                },
+                {
+                    "date": 1680606692129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const mongoose = require('mongoose');\n const password = \"sSXYhGvNH6HDlNQr\"\n-const uri = \"mongodb+srv://lysianeboisnel:${password}r@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n+const uri = \"mongodb+srv://lysianeboisnel:${password}@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose\n .connect(uri)\n .then(() => console.log('Connexion à MongoDB réussie !'))\n"
+                },
+                {
+                    "date": 1680607024100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const mongoose = require('mongoose');\n const password = \"sSXYhGvNH6HDlNQr\"\n-const uri = \"mongodb+srv://lysianeboisnel:${password}@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n+const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose\n .connect(uri)\n .then(() => console.log('Connexion à MongoDB réussie !'))\n"
+                },
+                {
+                    "date": 1680607048023,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const mongoose = require('mongoose');\n-const password = \"sSXYhGvNH6HDlNQr\"\n+//const password = \"sSXYhGvNH6HDlNQr\"\n const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose\n .connect(uri)\n"
+                },
+                {
+                    "date": 1680607459633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const mongoose = require('mongoose');\n //const password = \"sSXYhGvNH6HDlNQr\"\n-const uri = \"mongodb+srv://lysianeboisnel:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n+const uri = \"mongodb+srv://ly:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose\n .connect(uri)\n .then(() => console.log('Connexion à MongoDB réussie !'))\n"
+                },
+                {
+                    "date": 1680608847333,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n const mongoose = require('mongoose');\n+\n //const password = \"sSXYhGvNH6HDlNQr\"\n-const uri = \"mongodb+srv://ly:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n+const uri = \"mongodb+srv://lybo:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose\n .connect(uri)\n .then(() => console.log('Connexion à MongoDB réussie !'))\n"
+                },
+                {
+                    "date": 1680608854452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const mongoose = require('mongoose');\n-\n+c\n //const password = \"sSXYhGvNH6HDlNQr\"\n const uri = \"mongodb+srv://lybo:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose\n"
+                },
+                {
+                    "date": 1680608872678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const mongoose = require('mongoose');\n-\n+r\n //const password = \"sSXYhGvNH6HDlNQr\"\n const uri = \"mongodb+srv://lybo:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n mongoose\n"
+                }
+            ],
+            "date": 1680606560651,
+            "name": "Commit-0",
+            "content": "const mongoose = require('mongoose');\nconst password = \"sSXYhGvNH6HDlNQ\nconst uri = \"mongodb+srv://lysianeboisnel:${password}r@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n\nmongoose\n.connect(uri)\n.then(() => console.log('Connexion à MongoDB réussie !'))\n.catch(() => console.log('Connexion à MongoDB échouée !'));\n\nmodule.exports = mongoose\n\n\n"
+        }
+    ]
+}

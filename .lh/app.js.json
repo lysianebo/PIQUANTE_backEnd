@@ -1,0 +1,634 @@
+{
+    "sourceFile": "app.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 154,
+            "patches": [
+                {
+                    "date": 1680531591790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680594158974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,8 +25,10 @@\n   useUnifiedTopology: true })\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n  \n-app.use('/api/sauces', saucesRoutes  );\n+app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n+app.use('/images', express.static(path.join(__dirname, 'images')));\n \n+\n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680595962789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,7 @@\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n+api\n \n-\n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680595969700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,7 @@\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n-api\n+app.post\n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680595974834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,7 @@\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n-app.post\n+app.post(\"a\")\n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680595981249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,7 @@\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n-app.post(\"a\")\n+app.post(\"api/autho\")\n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680595986394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,7 @@\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n-app.post(\"api/autho\")\n+app.post(\"api/autho/signup\")\n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680595993956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,7 @@\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n-app.post(\"api/autho/signup\")\n+app.post(\"api/autho/signup\",)\n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680596000355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,7 @@\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n-app.post(\"api/autho/signup\",)\n+app.post(\"api/autho/signup\",(req, res))\n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680596013191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,7 @@\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n-app.post(\"api/autho/signup\",(req, res))\n+app.post(\"api/autho/signup\",(req, res) )\n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680596022615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,9 @@\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n-app.post(\"api/autho/signup\",(req, res) )\n+app.post(\"api/autho/signup\",(req, res) =>{\n+  \n+})\n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680596029596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,8 @@\n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n app.post(\"api/autho/signup\",(req, res) =>{\n-  \n+  console.log\n })\n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680596037621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,8 @@\n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n app.post(\"api/autho/signup\",(req, res) =>{\n-  console.log\n+  console.log(\"signup request\")\n })\n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680596045730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,8 @@\n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n app.post(\"api/autho/signup\",(req, res) =>{\n-  console.log(\"signup request\")\n+  console.log(\"signup request:\")\n })\n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680596053443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,8 +29,8 @@\n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n app.post(\"api/autho/signup\",(req, res) =>{\n-  console.log(\"signup request:\")\n+  console.log(\"signup request:\", req.body)\n })\n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680596065642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n-app.post(\"api/autho/signup\",(req, res) =>{\n+app.post(\"api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n })\n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680596630117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,7 @@\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n-app.post(\"api/auth/signup\",(req, res) =>{\n-  console.log(\"signup request:\", req.body)\n-})\n \n+\n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680596637574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,8 +24,11 @@\n { useNewUrlParser: true,\n   useUnifiedTopology: true })\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n+app.post(\"api/auth/signup\",(req, res) =>{\n+  console.log(\"signup request:\", req.body)\n+})\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n"
+                },
+                {
+                    "date": 1680596908714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n   console.log(\"signup request:\", req.body)\n })\n  \n app.use('/api/sauces', saucesRoutes);\n-app.use('/api/auth', userRoutes);\n+/app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680596971840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n   console.log(\"signup request:\", req.body)\n })\n  \n app.use('/api/sauces', saucesRoutes);\n-/app.use('/api/auth', userRoutes);\n+app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680597494631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n { useNewUrlParser: true,\n   useUnifiedTopology: true })\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n-app.post(\"api/auth/signup\",(req, res) =>{\n+app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n })\n  \n app.use('/api/sauces', saucesRoutes);\n"
+                },
+                {
+                    "date": 1680597801276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n+  res\n })\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n"
+                },
+                {
+                    "date": 1680597807028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n-  res\n+  res.send()\n })\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n"
+                },
+                {
+                    "date": 1680597824255,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n-  res.send()\n+  res.send({message })\n })\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n"
+                },
+                {
+                    "date": 1680597832888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n-  res.send({message })\n+  res.send({message: \"utilisat\"})\n })\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n"
+                },
+                {
+                    "date": 1680597839312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n-  res.send({message: \"utilisat\"})\n+  res.send({message: \"utilisateur enregistré\"})\n })\n  \n app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n"
+                },
+                {
+                    "date": 1680598083958,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n   res.send({message: \"utilisateur enregistré\"})\n })\n  \n app.use('/api/sauces', saucesRoutes);\n-app.use('/api/auth', userRoutes);\n+//app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680598547797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n-  res.send({message: \"utilisateur enregistré\"})\n+  res.send({ message: \"utilisateur enregistré\"})\n })\n  \n app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n"
+                },
+                {
+                    "date": 1680600521685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,16 +19,16 @@\n   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');\n   next();\n });\n \n-mongoose.connect('mongodb+srv://lybo:xvQJf7Y3NSTKQpUn@gofullstackdb.f69vkaw.mongodb.net/?retryWrites=true&w=majority',\n+//mongoose.connect('mongodb+srv://lybo:xvQJf7Y3NSTKQpUn@gofullstackdb.f69vkaw.mongodb.net/?retryWrites=true&w=majority',\n { useNewUrlParser: true,\n   useUnifiedTopology: true })\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n-  res.send({ message: \"utilisateur enregistré\"})\n+  res.send({ message: \"utilisateur enregistré\" })\n })\n  \n app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n"
+                },
+                {
+                    "date": 1680600564502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');\n   next();\n });\n \n-//mongoose.connect('mongodb+srv://lybo:xvQJf7Y3NSTKQpUn@gofullstackdb.f69vkaw.mongodb.net/?retryWrites=true&w=majority',\n+/mongoose.connect('mongodb+srv://lybo:xvQJf7Y3NSTKQpUn@gofullstackdb.f69vkaw.mongodb.net/?retryWrites=true&w=majority',\n { useNewUrlParser: true,\n   useUnifiedTopology: true })\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n"
+                },
+                {
+                    "date": 1680600570975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,11 @@\n   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');\n   next();\n });\n \n-/mongoose.connect('mongodb+srv://lybo:xvQJf7Y3NSTKQpUn@gofullstackdb.f69vkaw.mongodb.net/?retryWrites=true&w=majority',\n+\n+\n+//mongoose.connect('mongodb+srv://lybo:xvQJf7Y3NSTKQpUn@gofullstackdb.f69vkaw.mongodb.net/?retryWrites=true&w=majority',\n { useNewUrlParser: true,\n   useUnifiedTopology: true })\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n"
+                },
+                {
+                    "date": 1680600593319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n   next();\n });\n \n \n+mongoose.connect('mongodb+srv://lybo:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n \n //mongoose.connect('mongodb+srv://lybo:xvQJf7Y3NSTKQpUn@gofullstackdb.f69vkaw.mongodb.net/?retryWrites=true&w=majority',\n { useNewUrlParser: true,\n   useUnifiedTopology: true })\n"
+                },
+                {
+                    "date": 1680600608175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   next();\n });\n \n \n-mongoose.connect('mongodb+srv://lybo:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority\";\n+mongoose.connect('mongodb+srv://lybo:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority;\n \n //mongoose.connect('mongodb+srv://lybo:xvQJf7Y3NSTKQpUn@gofullstackdb.f69vkaw.mongodb.net/?retryWrites=true&w=majority',\n { useNewUrlParser: true,\n   useUnifiedTopology: true })\n"
+                },
+                {
+                    "date": 1680600614176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   next();\n });\n \n \n-mongoose.connect('mongodb+srv://lybo:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority;\n+mongoose.connect('mongodb+srv://lybo:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority'\n \n //mongoose.connect('mongodb+srv://lybo:xvQJf7Y3NSTKQpUn@gofullstackdb.f69vkaw.mongodb.net/?retryWrites=true&w=majority',\n { useNewUrlParser: true,\n   useUnifiedTopology: true })\n"
+                },
+                {
+                    "date": 1680601078878,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   next();\n });\n \n \n-mongoose.connect('mongodb+srv://lybo:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority'\n+mongoose.connect('mongodb+srv://lybo:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority',\n \n //mongoose.connect('mongodb+srv://lybo:xvQJf7Y3NSTKQpUn@gofullstackdb.f69vkaw.mongodb.net/?retryWrites=true&w=majority',\n { useNewUrlParser: true,\n   useUnifiedTopology: true })\n@@ -31,9 +31,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- \n+ cons\n app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601084460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- cons\n+ const ben = \n app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601090297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ben = \n+ const ben = new User\n app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601096419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ben = new User\n+ const ben = new User ({})\n app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601109739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ben = new User ({})\n+ const ben = new User ({email:})\n app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601115783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ben = new User ({email:})\n+ const ben = new User ({email: dfdf})\n app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601121115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n //const Thing = require('./models/Thing');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n+const { getMaxListeners } = require('process');\n \n const app = express();\n \n \n@@ -31,9 +32,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ben = new User ({email: dfdf})\n+ const ben = new User ({email: dfdf@getMaxListeners.com})\n app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601126463,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ben = new User ({email: dfdf@getMaxListeners.com})\n+ const ben = new User ({email: dfdf@getMaxListeners.com, pass})\n app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601137358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ben = new User ({email: dfdf@getMaxListeners.com, pass})\n+ const ben = new User ({email: dfdf@getMaxListeners.com, password:\"pouet\"})\n app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601154137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ben = new User ({email: dfdf@getMaxListeners.com, password:\"pouet\"})\n+ const ben = new User ({email: dfdf@get.com, password:\"pouet\"})\n app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601160090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ben = new User ({email: dfdf@get.com, password:\"pouet\"})\n+ const ben = new User ({email: \"dfdf@get.com, password:\"pouet\"})\n app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601173378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,10 +32,11 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ben = new User ({email: \"dfdf@get.com, password:\"pouet\"})\n-app.use('/api/sauces', saucesRoutes);\n+ const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n+\n+ app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n \n"
+                },
+                {
+                    "date": 1680601180131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n-\n+const ben \n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601187152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n-const ben \n+const ben = new User\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601193119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n const { getMaxListeners } = require('process');\n+const User = require('./models/User');\n \n const app = express();\n \n \n@@ -33,9 +34,9 @@\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n-const ben = new User\n+const ben = new User({})\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601205818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n-const ben = new User({})\n+console\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601211586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n-console\n+console.log(\"\")\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601217420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n-console.log(\"\")\n+console.log(\"ben\")\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601750922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,10 @@\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n-console.log(\"ben\")\n+console.log(\"ben\", ben)\n+\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601756902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n-\n+ben\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601764512,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n-ben\n+ben.save\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601778486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n-ben.save\n+ben.save().then\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601784577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n-ben.save().then\n+ben.save().then(res =)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601790029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n-ben.save().then(res =)\n+ben.save().then(res =>console)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601795223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n-ben.save().then(res =>console)\n+ben.save().then(res =>console.log((B)))\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601806661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n-ben.save().then(res =>console.log((B)))\n+ben.save().then(res =>console.log((\"Ben reregistré\")))\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601812892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n-ben.save().then(res =>console.log((\"Ben reregistré\")))\n+ben.save().then(res =>console.log((\"Ben reregistré\",)))\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601824167,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n-ben.save().then(res =>console.log((\"Ben reregistré\",)))\n+ben.save().then(res =>console.log((\"Ben reregistré\",res)))\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601836009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n-ben.save().then(res =>console.log((\"Ben reregistré\",res)))\n+ben.save().then(res =>console.log((\"Ben reregistré\",res))).cat\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601869956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n-ben.save().then(res =>console.log((\"Ben reregistré\",res))).cat\n+ben.save().then(res =>console.log((\"Ben reregistré\",res))).catch(() => console.log('Connexion à MongoDB échouée !'));\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601889110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n-ben.save().then(res =>console.log((\"Ben reregistré\",res))).catch(() => console.log('Connexion à MongoDB échouée !'));\n+ben.save().then(res =>console.log((\"Ben reregistré\",res))).catch((e => console.log('Connexion à MongoDB échouée !'));\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601899349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n-ben.save().then(res =>console.log((\"Ben reregistré\",res))).catch((e => console.log('Connexion à MongoDB échouée !'));\n+ben.save().then(res =>console.log((\"Ben reregistré\",res))).catch(err => console.log('Connexion à MongoDB échouée !'));\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601922489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n-ben.save().then(res =>console.log((\"Ben reregistré\",res))).catch(err => console.log('Connexion à MongoDB échouée !'));\n+ben.save().then(res =>console.log((\"Ben reregistré\",res))).catch(err => console.log('Ben pas enre !'));\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601934439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n-ben.save().then(res =>console.log((\"Ben reregistré\",res))).catch(err => console.log('Ben pas enre !'));\n+ben.save().then(res =>console.log((\"Ben reregistré\",res))).catch(err => console.log('Ben pas enregistré !'), err);\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680601994025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,10 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n-ben.save().then(res =>console.log((\"Ben reregistré\",res))).catch(err => console.log('Ben pas enregistré !'), err);\n+ben.save()\n+.then(res =>console.log((\"Ben reregistré\",res))).catch(err => console.log('Ben pas enregistré !'), err);\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680602003209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,10 @@\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n console.log(\"ben\", ben)\n ben.save()\n-.then(res =>console.log((\"Ben reregistré\",res))).catch(err => console.log('Ben pas enregistré !'), err);\n+.then(res =>console.log((\"Ben reregistré\",res)))\n+.catch(err => console.log('Ben pas enregistré !'), err);\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680602021228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n-console.log(\"ben\", ben)\n+\n ben.save()\n .then(res =>console.log((\"Ben reregistré\",res)))\n .catch(err => console.log('Ben pas enregistré !'), err);\n  app.use('/api/sauces', saucesRoutes);\n"
+                },
+                {
+                    "date": 1680602028325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,9 @@\n \n ben.save()\n .then(res =>console.log((\"Ben reregistré\",res)))\n .catch(err => console.log('Ben pas enregistré !'), err);\n+\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680602047471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,11 +36,11 @@\n })\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n \n ben.save()\n-.then(res =>console.log((\"Ben reregistré\",res)))\n+.then(res =>console.log((\"Ben reregistré\",res))\n .catch(err => console.log('Ben pas enregistré !'), err);\n-\n+console.log(\"ben\", ben)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680602058606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n \n ben.save()\n .then(res =>console.log((\"Ben reregistré\",res))\n-.catch(err => console.log('Ben pas enregistré !'), err);\n+.catch(err => console.log('Ben pas enregistré !'), err));\n console.log(\"ben\", ben)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n"
+                },
+                {
+                    "date": 1680602146132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n \n ben.save()\n .then(res =>console.log((\"Ben reregistré\",res))\n-.catch(err => console.log('Ben pas enregistré !'), err));\n+.catch(err => console.log('Ben pas enregistré !', err));\n console.log(\"ben\", ben)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n"
+                },
+                {
+                    "date": 1680602186529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n  const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n \n ben.save()\n .then(res =>console.log((\"Ben reregistré\",res))\n-.catch(err => console.log('Ben pas enregistré !', err));\n+.catch(err => console.log('Ben pas enregistré !', err)));\n console.log(\"ben\", ben)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n"
+                },
+                {
+                    "date": 1680602256026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,10 @@\n .then(res =>console.log((\"Ben reregistré\",res))\n .catch(err => console.log('Ben pas enregistré !', err)));\n console.log(\"ben\", ben)\n  app.use('/api/sauces', saucesRoutes);\n-//app.use('/api/auth', userRoutes);\n+//\n+app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680602287124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,16 +33,15 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ben = new User ({email: \"dfdf@get.com\", password:\"pouet\"})\n+ const ben = new User ({email: \"dfghghdf@get.com\", password:\"pouet\"})\n \n ben.save()\n .then(res =>console.log((\"Ben reregistré\",res))\n .catch(err => console.log('Ben pas enregistré !', err)));\n console.log(\"ben\", ben)\n  app.use('/api/sauces', saucesRoutes);\n-//\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n \n"
+                },
+                {
+                    "date": 1680602348730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n })\n  const ben = new User ({email: \"dfghghdf@get.com\", password:\"pouet\"})\n \n ben.save()\n-.then(res =>console.log((\"Ben reregistré\",res))\n+.then(res) =>console.log((\"Ben reregistré\",res))\n .catch(err => console.log('Ben pas enregistré !', err)));\n console.log(\"ben\", ben)\n  app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n"
+                },
+                {
+                    "date": 1680602356054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n  const ben = new User ({email: \"dfghghdf@get.com\", password:\"pouet\"})\n \n ben.save()\n .then(res) =>console.log((\"Ben reregistré\",res))\n-.catch(err => console.log('Ben pas enregistré !', err)));\n+.catch(err) => console.log('Ben pas enregistré !', err));\n console.log(\"ben\", ben)\n  app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n"
+                },
+                {
+                    "date": 1680602375410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n })\n  const ben = new User ({email: \"dfghghdf@get.com\", password:\"pouet\"})\n \n ben.save()\n-.then(res) =>console.log((\"Ben reregistré\",res))\n+.then((res) =>console.log((\"Ben reregistré\",res))\n .catch(err) => console.log('Ben pas enregistré !', err));\n console.log(\"ben\", ben)\n  app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n"
+                },
+                {
+                    "date": 1680602386077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n  const ben = new User ({email: \"dfghghdf@get.com\", password:\"pouet\"})\n \n ben.save()\n .then((res) =>console.log((\"Ben reregistré\",res))\n-.catch(err) => console.log('Ben pas enregistré !', err));\n+.catch((err) => console.log('Ben pas enregistré !', err));\n console.log(\"ben\", ben)\n  app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n"
+                },
+                {
+                    "date": 1680602392925,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n  const ben = new User ({email: \"dfghghdf@get.com\", password:\"pouet\"})\n \n ben.save()\n .then((res) =>console.log((\"Ben reregistré\",res))\n-.catch((err) => console.log('Ben pas enregistré !', err));\n+.catch((err) => console.log('Ben pas enregistré !', err))\n console.log(\"ben\", ben)\n  app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n"
+                },
+                {
+                    "date": 1680602404701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n })\n  const ben = new User ({email: \"dfghghdf@get.com\", password:\"pouet\"})\n \n ben.save()\n-.then((res) =>console.log((\"Ben reregistré\",res))\n+.then((res) =>console.log(\"Ben reregistré\",res))\n .catch((err) => console.log('Ben pas enregistré !', err))\n console.log(\"ben\", ben)\n  app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n"
+                },
+                {
+                    "date": 1680602427196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ben = new User ({email: \"dfghghdf@get.com\", password:\"pouet\"})\n+ const ben = new User ({email: \"dfghgghdf@get.com\", password:\"pouet\"})\n \n ben.save()\n .then((res) =>console.log(\"Ben reregistré\",res))\n .catch((err) => console.log('Ben pas enregistré !', err))\n"
+                },
+                {
+                    "date": 1680602433829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ben = new User ({email: \"dfghgghdf@get.com\", password:\"pouet\"})\n+ const ben = new User ({email: \"dfghtrtrgghdf@get.com\", password:\"pouet\"})\n \n ben.save()\n .then((res) =>console.log(\"Ben reregistré\",res))\n .catch((err) => console.log('Ben pas enregistré !', err))\n"
+                },
+                {
+                    "date": 1680602498745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n .then((res) =>console.log(\"Ben reregistré\",res))\n .catch((err) => console.log('Ben pas enregistré !', err))\n console.log(\"ben\", ben)\n  app.use('/api/sauces', saucesRoutes);\n-app.use('/api/auth', userRoutes);\n+//app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680602504403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ben = new User ({email: \"dfghtrtrgghdf@get.com\", password:\"pouet\"})\n+ const ben = new User ({email: \"dfghtrtrgghdf@ge.com\", password:\"pouet\"})\n \n ben.save()\n .then((res) =>console.log(\"Ben reregistré\",res))\n .catch((err) => console.log('Ben pas enregistré !', err))\n"
+                },
+                {
+                    "date": 1680602510427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ben = new User ({email: \"dfghtrtrgghdf@ge.com\", password:\"pouet\"})\n+ const ben = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n \n ben.save()\n .then((res) =>console.log(\"Ben reregistré\",res))\n .catch((err) => console.log('Ben pas enregistré !', err))\n"
+                },
+                {
+                    "date": 1680602517565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ben = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n+ const beno = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n \n ben.save()\n .then((res) =>console.log(\"Ben reregistré\",res))\n .catch((err) => console.log('Ben pas enregistré !', err))\n"
+                },
+                {
+                    "date": 1680602523837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const beno = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n \n-ben.save()\n+beno.save()\n .then((res) =>console.log(\"Ben reregistré\",res))\n .catch((err) => console.log('Ben pas enregistré !', err))\n console.log(\"ben\", ben)\n  app.use('/api/sauces', saucesRoutes);\n"
+                },
+                {
+                    "date": 1680602532165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n beno.save()\n .then((res) =>console.log(\"Ben reregistré\",res))\n .catch((err) => console.log('Ben pas enregistré !', err))\n-console.log(\"ben\", ben)\n+console.log(\"beno\", ben)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680602544261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,11 +36,11 @@\n })\n  const beno = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n \n beno.save()\n-.then((res) =>console.log(\"Ben reregistré\",res))\n+.then((res) =>console.log(\"Beno reregistré\",res))\n .catch((err) => console.log('Ben pas enregistré !', err))\n-console.log(\"beno\", ben)\n+console.log(\"beno\", beno)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680602632415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const express = require('express');\n const mongoose = require('mongoose');\n //const Thing = require('./models/Thing');\n const saucesRoutes = require('./routes/sauces');\n-const userRoutes = require('./routes/user');\n+//const userRoutes = require('./routes/user');\n const path = require('path');\n const { getMaxListeners } = require('process');\n const User = require('./models/User');\n \n@@ -37,9 +37,9 @@\n  const beno = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n \n beno.save()\n .then((res) =>console.log(\"Beno reregistré\",res))\n-.catch((err) => console.log('Ben pas enregistré !', err))\n+.catch((err) => console.log('Beno pas enregistré !', err))\n console.log(\"beno\", beno)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n"
+                },
+                {
+                    "date": 1680602646912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const saucesRoutes = require('./routes/sauces');\n //const userRoutes = require('./routes/user');\n const path = require('path');\n const { getMaxListeners } = require('process');\n-const User = require('./models/User');\n+//const User = require('./models/User');\n \n const app = express();\n \n \n"
+                },
+                {
+                    "date": 1680602701067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const saucesRoutes = require('./routes/sauces');\n //const userRoutes = require('./routes/user');\n const path = require('path');\n const { getMaxListeners } = require('process');\n-//const User = require('./models/User');\n+const User = require('./models/User');\n \n const app = express();\n \n \n"
+                },
+                {
+                    "date": 1680602856251,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,11 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const beno = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n \n-beno.save()\n-.then((res) =>console.log(\"Beno reregistré\",res))\n-.catch((err) => console.log('Beno pas enregistré !', err))\n+\n console.log(\"beno\", beno)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n"
+                },
+                {
+                    "date": 1680602934987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const saucesRoutes = require('./routes/sauces');\n //const userRoutes = require('./routes/user');\n const path = require('path');\n const { getMaxListeners } = require('process');\n-const User = require('./models/User');\n+//const User = require('./models/User');\n \n const app = express();\n \n \n"
+                },
+                {
+                    "date": 1680602943946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const beno = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n+ const user = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n \n \n console.log(\"beno\", beno)\n  app.use('/api/sauces', saucesRoutes);\n"
+                },
+                {
+                    "date": 1680602972671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const user = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n+ const User = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n \n \n console.log(\"beno\", beno)\n  app.use('/api/sauces', saucesRoutes);\n"
+                },
+                {
+                    "date": 1680602985934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const User = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n+ const ser = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n \n \n console.log(\"beno\", beno)\n  app.use('/api/sauces', saucesRoutes);\n"
+                },
+                {
+                    "date": 1680603010119,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const saucesRoutes = require('./routes/sauces');\n //const userRoutes = require('./routes/user');\n const path = require('path');\n const { getMaxListeners } = require('process');\n-//const User = require('./models/User');\n+const User = require('./models/User');\n \n const app = express();\n \n \n@@ -33,11 +33,13 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const ser = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n+ const beno = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n \n-\n+beno.save()\n+.then((res) =>console.log(\"Beno reregistré\",res))\n+.catch((err) => console.log('Beno pas enregistré !', err))\n console.log(\"beno\", beno)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n"
+                },
+                {
+                    "date": 1680603030953,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n })\n  const beno = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n \n beno.save()\n-.then((res) =>console.log(\"Beno reregistré\",res))\n+.then((res) =>console.log(\"Beno reregistré\", res))\n .catch((err) => console.log('Beno pas enregistré !', err))\n console.log(\"beno\", beno)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n"
+                },
+                {
+                    "date": 1680603071599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const beno = new User ({email: \"dfghtrtrgghdf@gmail.com\", password:\"podduet\"})\n+ const beno = new User ({email: \"dghdf@gmail.com\", password:\"podduet\"})\n \n beno.save()\n .then((res) =>console.log(\"Beno reregistré\", res))\n .catch((err) => console.log('Beno pas enregistré !', err))\n"
+                },
+                {
+                    "date": 1680603080501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n app.post(\"/api/auth/signup\",(req, res) =>{\n   console.log(\"signup request:\", req.body)\n   res.send({ message: \"utilisateur enregistré\" })\n })\n- const beno = new User ({email: \"dghdf@gmail.com\", password:\"podduet\"})\n+ const benoo = new User ({email: \"dghdf@gmail.com\", password:\"podfgduet\"})\n \n beno.save()\n .then((res) =>console.log(\"Beno reregistré\", res))\n .catch((err) => console.log('Beno pas enregistré !', err))\n"
+                },
+                {
+                    "date": 1680603085544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n })\n  const benoo = new User ({email: \"dghdf@gmail.com\", password:\"podfgduet\"})\n \n beno.save()\n-.then((res) =>console.log(\"Beno reregistré\", res))\n+.then((res) =>console.log(\"Benoo reregistré\", res))\n .catch((err) => console.log('Beno pas enregistré !', err))\n console.log(\"beno\", beno)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n"
+                },
+                {
+                    "date": 1680603091307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,10 +37,10 @@\n  const benoo = new User ({email: \"dghdf@gmail.com\", password:\"podfgduet\"})\n \n beno.save()\n .then((res) =>console.log(\"Benoo reregistré\", res))\n-.catch((err) => console.log('Beno pas enregistré !', err))\n-console.log(\"beno\", beno)\n+.catch((err) => console.log('Benoo pas enregistré !', err))\n+console.log(\"beoo\", beno)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680603112046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n beno.save()\n .then((res) =>console.log(\"Benoo reregistré\", res))\n .catch((err) => console.log('Benoo pas enregistré !', err))\n-console.log(\"beoo\", beno)\n+console.log(\"beoo\", email)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680603141029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,12 +35,12 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const benoo = new User ({email: \"dghdf@gmail.com\", password:\"podfgduet\"})\n \n-beno.save()\n+benoo.save()\n .then((res) =>console.log(\"Benoo reregistré\", res))\n .catch((err) => console.log('Benoo pas enregistré !', err))\n-console.log(\"beoo\", email)\n+console.log(\"benoo\", email)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680603158519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n benoo.save()\n .then((res) =>console.log(\"Benoo reregistré\", res))\n .catch((err) => console.log('Benoo pas enregistré !', err))\n-console.log(\"benoo\", email)\n+console.log(\"benoo\", benoo)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680605061496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,12 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const benoo = new User ({email: \"dghdf@gmail.com\", password:\"podfgduet\"})\n \n-benoo.save()\n-.then((res) =>console.log(\"Benoo reregistré\", res))\n-.catch((err) => console.log('Benoo pas enregistré !', err))\n-console.log(\"benoo\", benoo)\n+\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680605066671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,12 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const benoo = new User ({email: \"dghdf@gmail.com\", password:\"podfgduet\"})\n \n-\n+benoo.save()\n+.then((res) =>console.log(\"Benoo reregistré\", res))\n+.catch((err) => console.log('Benoo pas enregistré !', err))\n+console.log(\"benoo\", benoo)\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680605072273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,12 +35,9 @@\n   res.send({ message: \"utilisateur enregistré\" })\n })\n  const benoo = new User ({email: \"dghdf@gmail.com\", password:\"podfgduet\"})\n \n-benoo.save()\n-.then((res) =>console.log(\"Benoo reregistré\", res))\n-.catch((err) => console.log('Benoo pas enregistré !', err))\n-console.log(\"benoo\", benoo)\n+\n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n"
+                },
+                {
+                    "date": 1680605102722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,13 +29,8 @@\n { useNewUrlParser: true,\n   useUnifiedTopology: true })\n .then(() => console.log('Connexion à MongoDB réussie !'))\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n-app.post(\"/api/auth/signup\",(req, res) =>{\n-  console.log(\"signup request:\", req.body)\n-  res.send({ message: \"utilisateur enregistré\" })\n-})\n- const benoo = new User ({email: \"dghdf@gmail.com\", password:\"podfgduet\"})\n \n \n  app.use('/api/sauces', saucesRoutes);\n //app.use('/api/auth', userRoutes);\n"
+                },
+                {
+                    "date": 1680605208165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n //const Thing = require('./models/Thing');\n const saucesRoutes = require('./routes/sauces');\n //const userRoutes = require('./routes/user');\n const path = require('path');\n-const { getMaxListeners } = require('process');\n+//const { getMaxListeners } = require('process');\n const User = require('./models/User');\n \n const app = express();\n \n@@ -32,9 +32,9 @@\n .catch(() => console.log('Connexion à MongoDB échouée !'));\n \n \n  app.use('/api/sauces', saucesRoutes);\n-//app.use('/api/auth', userRoutes);\n+app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n \n module.exports = app;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680605214598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const saucesRoutes = require('./routes/sauces');\n //const userRoutes = require('./routes/user');\n const path = require('path');\n //const { getMaxListeners } = require('process');\n-const User = require('./models/User');\n+//const User = require('./models/User');\n \n const app = express();\n \n \n"
+                },
+                {
+                    "date": 1680605952136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const express = require('express');\n const mongoose = require('mongoose');\n //const Thing = require('./models/Thing');\n const saucesRoutes = require('./routes/sauces');\n-//const userRoutes = require('./routes/user');\n+const userRoutes = require('./routes/user');\n const path = require('path');\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n"
+                },
+                {
+                    "date": 1680605963229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n const express = require('express');\n const mongoose = require('mongoose');\n-//const Thing = require('./models/Thing');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n //const { getMaxListeners } = require('process');\n"
+                },
+                {
+                    "date": 1680606108812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n const express = require('express');\n-const mongoose = require('mongoose');\n+//const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n //const { getMaxListeners } = require('process');\n"
+                },
+                {
+                    "date": 1680606114046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n+\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680606120755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n-\n+require()\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680606126191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n-require()\n+require(\".\")\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680606145960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n-require(\".\")\n+require(\"\")\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680606170089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n-require(\"\")\n+require(\"m \")\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680606175245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n-require(\"m \")\n+require(\"mongodb \")\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680606190556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n-require(\"mongodb \")\n+require(\"mongodb\")\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680606270081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n-require(\"mongodb\")\n+const monrequire(\"mongodb\")\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680606277412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n-const monrequire(\"mongodb\")\n+const mongoose = require(\"mongodb\")\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680606282823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n-const mongoose = require(\"mongodb\")\n+const mongoose = require(mongodb\")\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680606289992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n-const mongoose = require(mongodb\")\n+const mongoose = require('mongodb\")\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680606322480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n-const mongoose = require('mongodb\")\n+const mongoose = require('mongodb.')\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680606360412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n-const mongoose = require('mongodb.')\n+const mongoose = require('mongodb')\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680606365908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n-const mongoose = require('mongodb')\n+const mongoose = require('.mongodb')\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680606389659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n-const mongoose = require('.mongodb')\n+const mongoose = require('./')\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680606413109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n-const mongoose = require('./')\n+const mongoose = require('.')\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680606618459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n //const mongoose = require('mongoose');\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n const path = require('path');\n-const mongoose = require('.')\n+const mongoose = require('./mongodb')\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n@@ -22,9 +22,9 @@\n   next();\n });\n \n \n-mongoose.connect('mongodb+srv://lybo:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority',\n+//mongoose.connect('mongodb+srv://lybo:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority',\n \n //mongoose.connect('mongodb+srv://lybo:xvQJf7Y3NSTKQpUn@gofullstackdb.f69vkaw.mongodb.net/?retryWrites=true&w=majority',\n { useNewUrlParser: true,\n   useUnifiedTopology: true })\n"
+                },
+                {
+                    "date": 1680606638050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,12 +25,12 @@\n \n //mongoose.connect('mongodb+srv://lybo:sSXYhGvNH6HDlNQr@piquante.om2j9zq.mongodb.net/?retryWrites=true&w=majority',\n \n //mongoose.connect('mongodb+srv://lybo:xvQJf7Y3NSTKQpUn@gofullstackdb.f69vkaw.mongodb.net/?retryWrites=true&w=majority',\n-{ useNewUrlParser: true,\n-  useUnifiedTopology: true })\n-.then(() => console.log('Connexion à MongoDB réussie !'))\n-.catch(() => console.log('Connexion à MongoDB échouée !'));\n+// { useNewUrlParser: true,\n+//   useUnifiedTopology: true })\n+// .then(() => console.log('Connexion à MongoDB réussie !'))\n+// .catch(() => console.log('Connexion à MongoDB échouée !'));\n \n \n  app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n"
+                },
+                {
+                    "date": 1680607222259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n //intercepte toutes les requêtes json\n \n app.use(express.json());\n \n-\n+//cor\n app.use((req, res, next) => {\n   res.setHeader('Access-Control-Allow-Origin', '*');\n   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');\n   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');\n"
+                },
+                {
+                    "date": 1680607251001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n const express = require('express');\n //const mongoose = require('mongoose');\n-const saucesRoutes = require('./routes/sauces');\n-const userRoutes = require('./routes/user');\n+\n const path = require('path');\n const mongoose = require('./mongodb')\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n@@ -13,9 +12,9 @@\n //intercepte toutes les requêtes json\n \n app.use(express.json());\n \n-//cor\n+//cors\n app.use((req, res, next) => {\n   res.setHeader('Access-Control-Allow-Origin', '*');\n   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');\n   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');\n"
+                },
+                {
+                    "date": 1680607256230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,10 @@\n //const mongoose = require('mongoose');\n \n const path = require('path');\n const mongoose = require('./mongodb')\n+const saucesRoutes = require('./routes/sauces');\n+const userRoutes = require('./routes/user');\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680607265784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,10 +2,9 @@\n //const mongoose = require('mongoose');\n \n const path = require('path');\n const mongoose = require('./mongodb')\n-const saucesRoutes = require('./routes/sauces');\n-const userRoutes = require('./routes/user');\n+\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n@@ -32,9 +31,9 @@\n // .then(() => console.log('Connexion à MongoDB réussie !'))\n // .catch(() => console.log('Connexion à MongoDB échouée !'));\n \n \n- app.use('/api/sauces', saucesRoutes);\n+app.use('/api/sauces', saucesRoutes);\n app.use('/api/auth', userRoutes);\n app.use('/images', express.static(path.join(__dirname, 'images')));\n \n \n"
+                },
+                {
+                    "date": 1680607969455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n //const mongoose = require('mongoose');\n \n const path = require('path');\n const mongoose = require('./mongodb')\n-\n+const saucesRoutes = require('./routes/sauces');\n+const userRoutes = require('./routes/user');\n //const { getMaxListeners } = require('process');\n //const User = require('./models/User');\n \n const app = express();\n"
+                },
+                {
+                    "date": 1680611955801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require('express');\n //const mongoose = require('mongoose');\n-\n+cons\n const path = require('path');\n const mongoose = require('./mongodb')\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n"
+                },
+                {
+                    "date": 1680611961037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require('express');\n //const mongoose = require('mongoose');\n-cons\n+const\n const path = require('path');\n const mongoose = require('./mongodb')\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n"
+                },
+                {
+                    "date": 1680611981564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n const express = require('express');\n //const mongoose = require('mongoose');\n-const\n+\n const path = require('path');\n const mongoose = require('./mongodb')\n const saucesRoutes = require('./routes/sauces');\n const userRoutes = require('./routes/user');\n"
+                },
+                {
+                    "date": 1680611987493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+re\n const express = require('express');\n //const mongoose = require('mongoose');\n \n const path = require('path');\n"
+                },
+                {
+                    "date": 1680611996222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-re\n+require('do')\n const express = require('express');\n //const mongoose = require('mongoose');\n \n const path = require('path');\n"
+                },
+                {
+                    "date": 1680612009109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-require('do')\n+require('dotenv').config\n const express = require('express');\n //const mongoose = require('mongoose');\n \n const path = require('path');\n"
+                },
+                {
+                    "date": 1680612090873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-require('dotenv').config\n+require('dotenv').config()\n const express = require('express');\n //const mongoose = require('mongoose');\n \n const path = require('path');\n@@ -10,9 +10,9 @@\n //const User = require('./models/User');\n \n const app = express();\n \n-\n+console\n //intercepte toutes les requêtes json\n \n app.use(express.json());\n \n"
+                },
+                {
+                    "date": 1680612096500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n //const User = require('./models/User');\n \n const app = express();\n \n-console\n+console.log()\n //intercepte toutes les requêtes json\n \n app.use(express.json());\n \n"
+                },
+                {
+                    "date": 1680612105414,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n //const User = require('./models/User');\n \n const app = express();\n \n-console.log()\n+console.log(\"Variable d'envi\")\n //intercepte toutes les requêtes json\n \n app.use(express.json());\n \n"
+                },
+                {
+                    "date": 1680612110870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n //const User = require('./models/User');\n \n const app = express();\n \n-console.log(\"Variable d'envi\")\n+console.log(\"Variable d'environnement:\")\n //intercepte toutes les requêtes json\n \n app.use(express.json());\n \n"
+                },
+                {
+                    "date": 1680612117571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n //const User = require('./models/User');\n \n const app = express();\n \n-console.log(\"Variable d'environnement:\")\n+console.log(\"Variable d'environnement:\", proces)\n //intercepte toutes les requêtes json\n \n app.use(express.json());\n \n"
+                },
+                {
+                    "date": 1680612122803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n //const User = require('./models/User');\n \n const app = express();\n \n-console.log(\"Variable d'environnement:\", proces)\n+console.log(\"Variable d'environnement:\", process.env.)\n //intercepte toutes les requêtes json\n \n app.use(express.json());\n \n"
+                },
+                {
+                    "date": 1680612129326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n //const User = require('./models/User');\n \n const app = express();\n \n-console.log(\"Variable d'environnement:\", process.env.M)\n+console.log(\"Variable d'environnement:\", process.env.MO)\n //intercepte toutes les requêtes json\n \n app.use(express.json());\n \n"
+                }
+            ],
+            "date": 1680531591790,
+            "name": "Commit-0",
+            "content": "const express = require('express');\nconst mongoose = require('mongoose');\n//const Thing = require('./models/Thing');\nconst saucesRoutes = require('./routes/sauces');\nconst userRoutes = require('./routes/user');\nconst path = require('path');\n\nconst app = express();\n\n\n//intercepte toutes les requêtes json\n\napp.use(express.json());\n\n\napp.use((req, res, next) => {\n  res.setHeader('Access-Control-Allow-Origin', '*');\n  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');\n  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');\n  next();\n});\n\nmongoose.connect('mongodb+srv://lybo:xvQJf7Y3NSTKQpUn@gofullstackdb.f69vkaw.mongodb.net/?retryWrites=true&w=majority',\n{ useNewUrlParser: true,\n  useUnifiedTopology: true })\n.then(() => console.log('Connexion à MongoDB réussie !'))\n.catch(() => console.log('Connexion à MongoDB échouée !'));\n \napp.use('/api/sauces', saucesRoutes  );\napp.use('/api/auth', userRoutes);\n\nmodule.exports = app;"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "models/Sauces.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1680520130763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680520723668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,5 @@\n   usersDisliked: { type: [], required: true },\n });\n \n \n-module.exports = mongoose.model('Sauces', saucesSchema);s\n\\ No newline at end of file\n+module.exports = mongoose.model('Sauces', saucesSchema);\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1680520130763,
+            "name": "Commit-0",
+            "content": "const mongoose = require('mongoose');\n\nconst saucesSchema = mongoose.Schema({\n  userId: { type: String, required: true },\n  name: { type: String, required: true },\n  manufacturer: { type: String, required: true },\n  description: { type: String, required: true },\n  mainPepper: { type: String, required: true },\n  imageUrl: { type: String, required: true },\n  heat: { type: Number, required: true },\n  likes: { default:0, type: Number, required: true },\n  dislikes: { default:0, type: Number, required: true },\n  usersLiked: { type: [], required: true },\n  usersDisliked: { type: [], required: true },\n});\n\n\nmodule.exports = mongoose.model('Sauces', saucesSchema);s"
+        }
+    ]
+}

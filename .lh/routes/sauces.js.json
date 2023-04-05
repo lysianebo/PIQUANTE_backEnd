@@ -1,0 +1,122 @@
+{
+    "sourceFile": "routes/sauces.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 26,
+            "patches": [
+                {
+                    "date": 1680520992728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1680520998825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,7 @@\n router.post('/', auth, multer, saucesCtrl.createSauces);\n router.get('/:id', auth, saucesCtrl.getOneSauces);\n router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n router.delete('/:id', auth, saucesCtrl.deleteSauces);\n-con\n+console.lor\n \n module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680521010144,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,7 @@\n router.post('/', auth, multer, saucesCtrl.createSauces);\n router.get('/:id', auth, saucesCtrl.getOneSauces);\n router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n router.delete('/:id', auth, saucesCtrl.deleteSauces);\n-console.lor\n+console.log(\"routes sauces\")\n \n module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680521099721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,7 @@\n router.post('/', auth, multer, saucesCtrl.createSauces);\n router.get('/:id', auth, saucesCtrl.getOneSauces);\n router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n router.delete('/:id', auth, saucesCtrl.deleteSauces);\n-console.log(\"routes sauces\")\n+console.log(\"routes sauceddds\")\n \n module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680521244919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,6 @@\n router.post('/', auth, multer, saucesCtrl.createSauces);\n router.get('/:id', auth, saucesCtrl.getOneSauces);\n router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n router.delete('/:id', auth, saucesCtrl.deleteSauces);\n-console.log(\"routes sauceddds\")\n \n module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680521259915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,6 +10,7 @@\n router.post('/', auth, multer, saucesCtrl.createSauces);\n router.get('/:id', auth, saucesCtrl.getOneSauces);\n router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n router.delete('/:id', auth, saucesCtrl.deleteSauces);\n+console.log(\"routes sauceddds\")\n \n module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680521856382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n const saucesCtrl = require('../controllers/sauces');\n \n router.get('/', auth, saucesCtrl.getAllSauces);\n router.post('/', auth, multer, saucesCtrl.createSauces);\n+\n router.get('/:id', auth, saucesCtrl.getOneSauces);\n router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n router.delete('/:id', auth, saucesCtrl.deleteSauces);\n-console.log(\"routes sauceddds\")\n \n module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680521873992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n const saucesCtrl = require('../controllers/sauces');\n \n router.get('/', auth, saucesCtrl.getAllSauces);\n router.post('/', auth, multer, saucesCtrl.createSauces);\n+router.post('/:id', auth, multer, saucesCtrl.createSauces);\n \n router.get('/:id', auth, saucesCtrl.getOneSauces);\n router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n router.delete('/:id', auth, saucesCtrl.deleteSauces);\n"
+                },
+                {
+                    "date": 1680521899617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,10 @@\n \n const saucesCtrl = require('../controllers/sauces');\n \n router.get('/', auth, saucesCtrl.getAllSauces);\n-router.post('/', auth, multer, saucesCtrl.createSauces);\n-router.post('/:id', auth, multer, saucesCtrl.createSauces);\n+router.post('/', auth, multer, saucesCtrl.likeSauces);\n+router.post('/:id/like', auth, multer, saucesCtrl.createSauces);\n \n router.get('/:id', auth, saucesCtrl.getOneSauces);\n router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n router.delete('/:id', auth, saucesCtrl.deleteSauces);\n"
+                },
+                {
+                    "date": 1680616378765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,11 @@\n const multer = require('../middleware/multer-config');\n \n const saucesCtrl = require('../controllers/sauces');\n \n+\n+\n+\n router.get('/', auth, saucesCtrl.getAllSauces);\n router.post('/', auth, multer, saucesCtrl.likeSauces);\n router.post('/:id/like', auth, multer, saucesCtrl.createSauces);\n \n"
+                },
+                {
+                    "date": 1680616384880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,13 @@\n const saucesCtrl = require('../controllers/sauces');\n \n \n \n+router.post('/', auth, multer, saucesCtrl.createSauce);\n+router.put('/:id', auth, multer, saucesCtrl.modifySauce);\n+router.delete('/:id', auth, saucesCtrl.deleteSauce);\n+router.get('/:id', auth, saucesCtrl.getOneSauce);\n+router.get('/', auth, saucesCtrl.getAllSauces);\n \n router.get('/', auth, saucesCtrl.getAllSauces);\n router.post('/', auth, multer, saucesCtrl.likeSauces);\n router.post('/:id/like', auth, multer, saucesCtrl.createSauces);\n"
+                },
+                {
+                    "date": 1680616396907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,13 +13,13 @@\n router.delete('/:id', auth, saucesCtrl.deleteSauce);\n router.get('/:id', auth, saucesCtrl.getOneSauce);\n router.get('/', auth, saucesCtrl.getAllSauces);\n \n-router.get('/', auth, saucesCtrl.getAllSauces);\n-router.post('/', auth, multer, saucesCtrl.likeSauces);\n-router.post('/:id/like', auth, multer, saucesCtrl.createSauces);\n+// router.get('/', auth, saucesCtrl.getAllSauces);\n+// router.post('/', auth, multer, saucesCtrl.likeSauces);\n+// router.post('/:id/like', auth, multer, saucesCtrl.createSauces);\n \n-router.get('/:id', auth, saucesCtrl.getOneSauces);\n-router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n-router.delete('/:id', auth, saucesCtrl.deleteSauces);\n+// router.get('/:id', auth, saucesCtrl.getOneSauces);\n+// router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n+// router.delete('/:id', auth, saucesCtrl.deleteSauces);\n \n module.exports = router;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1680616735331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n const saucesCtrl = require('../controllers/sauces');\n \n \n \n-router.post('/', auth, multer, saucesCtrl.createSauce);\n+router.post('/', auth, multer, saucesCtrl.createSauces);\n router.put('/:id', auth, multer, saucesCtrl.modifySauce);\n router.delete('/:id', auth, saucesCtrl.deleteSauce);\n router.get('/:id', auth, saucesCtrl.getOneSauce);\n router.get('/', auth, saucesCtrl.getAllSauces);\n"
+                },
+                {
+                    "date": 1680616812402,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n \n \n \n router.post('/', auth, multer, saucesCtrl.createSauces);\n-router.put('/:id', auth, multer, saucesCtrl.modifySauce);\n+router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n router.delete('/:id', auth, saucesCtrl.deleteSauce);\n router.get('/:id', auth, saucesCtrl.getOneSauce);\n router.get('/', auth, saucesCtrl.getAllSauces);\n \n"
+                },
+                {
+                    "date": 1680616818726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n \n \n router.post('/', auth, multer, saucesCtrl.createSauces);\n router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n-router.delete('/:id', auth, saucesCtrl.deleteSauce);\n-router.get('/:id', auth, saucesCtrl.getOneSauce);\n+router.delete('/:id', auth, saucesCtrl.deleteSauces);\n+router.get('/:id', auth, saucesCtrl.getOneSauces);\n router.get('/', auth, saucesCtrl.getAllSauces);\n \n // router.get('/', auth, saucesCtrl.getAllSauces);\n // router.post('/', auth, multer, saucesCtrl.likeSauces);\n"
+                },
+                {
+                    "date": 1680617586470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n router.delete('/:id', auth, saucesCtrl.deleteSauces);\n router.get('/:id', auth, saucesCtrl.getOneSauces);\n router.get('/', auth, saucesCtrl.getAllSauces);\n \n+\n // router.get('/', auth, saucesCtrl.getAllSauces);\n // router.post('/', auth, multer, saucesCtrl.likeSauces);\n // router.post('/:id/like', auth, multer, saucesCtrl.createSauces);\n \n"
+                },
+                {
+                    "date": 1680617598302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,10 @@\n router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n router.delete('/:id', auth, saucesCtrl.deleteSauces);\n router.get('/:id', auth, saucesCtrl.getOneSauces);\n router.get('/', auth, saucesCtrl.getAllSauces);\n+router.post('/:id/like', auth, multer, saucesCtrl.cre);\n \n-\n // router.get('/', auth, saucesCtrl.getAllSauces);\n // router.post('/', auth, multer, saucesCtrl.likeSauces);\n // router.post('/:id/like', auth, multer, saucesCtrl.createSauces);\n \n"
+                },
+                {
+                    "date": 1680617624199,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n router.delete('/:id', auth, saucesCtrl.deleteSauces);\n router.get('/:id', auth, saucesCtrl.getOneSauces);\n router.get('/', auth, saucesCtrl.getAllSauces);\n-router.post('/:id/like', auth, multer, saucesCtrl.cre);\n+router.post('/:id/like', auth, multer, saucesCtrl.li);\n \n // router.get('/', auth, saucesCtrl.getAllSauces);\n // router.post('/', auth, multer, saucesCtrl.likeSauces);\n // router.post('/:id/like', auth, multer, saucesCtrl.createSauces);\n"
+                },
+                {
+                    "date": 1680617718957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n router.delete('/:id', auth, saucesCtrl.deleteSauces);\n router.get('/:id', auth, saucesCtrl.getOneSauces);\n router.get('/', auth, saucesCtrl.getAllSauces);\n-router.post('/:id/like', auth, multer, saucesCtrl.li);\n+router.post('/:id/like', auth, multer, saucesCtrl.likeSauces);\n \n // router.get('/', auth, saucesCtrl.getAllSauces);\n // router.post('/', auth, multer, saucesCtrl.likeSauces);\n // router.post('/:id/like', auth, multer, saucesCtrl.createSauces);\n"
+                },
+                {
+                    "date": 1680618872614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,13 @@\n const auth = require('../middleware/auth');\n const multer = require('../middleware/multer-config');\n \n const saucesCtrl = require('../controllers/sauces');\n+const saucesCtrl = require('../controllers/sauces');\n \n \n \n+\n router.post('/', auth, multer, saucesCtrl.createSauces);\n router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n router.delete('/:id', auth, saucesCtrl.deleteSauces);\n router.get('/:id', auth, saucesCtrl.getOneSauces);\n"
+                },
+                {
+                    "date": 1680618882736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const auth = require('../middleware/auth');\n const multer = require('../middleware/multer-config');\n \n const saucesCtrl = require('../controllers/sauces');\n-const saucesCtrl = require('../controllers/sauces');\n+const saucesCtrl = require('../controllers/');\n \n \n \n \n"
+                },
+                {
+                    "date": 1680618889317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const auth = require('../middleware/auth');\n const multer = require('../middleware/multer-config');\n \n const saucesCtrl = require('../controllers/sauces');\n-const saucesCtrl = require('../controllers/');\n+const saucesCtrl = require('../controllers/like');\n \n \n \n \n"
+                },
+                {
+                    "date": 1680618992517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const auth = require('../middleware/auth');\n const multer = require('../middleware/multer-config');\n \n const saucesCtrl = require('../controllers/sauces');\n-const saucesCtrl = require('../controllers/like');\n+const Ctrl = require('../controllers/like');\n \n \n \n \n"
+                },
+                {
+                    "date": 1680619004075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n const auth = require('../middleware/auth');\n const multer = require('../middleware/multer-config');\n \n const saucesCtrl = require('../controllers/sauces');\n-const Ctrl = require('../controllers/like');\n+const likeCtrl = require('../controllers/like');\n \n \n \n \n"
+                },
+                {
+                    "date": 1680619076595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n router.delete('/:id', auth, saucesCtrl.deleteSauces);\n router.get('/:id', auth, saucesCtrl.getOneSauces);\n router.get('/', auth, saucesCtrl.getAllSauces);\n-router.post('/:id/like', auth, multer, saucesCtrl.likeSauces);\n+router.post('/:id/like', auth, multer, Ctrl.likeSauces);\n \n // router.get('/', auth, saucesCtrl.getAllSauces);\n // router.post('/', auth, multer, saucesCtrl.likeSauces);\n // router.post('/:id/like', auth, multer, saucesCtrl.createSauces);\n"
+                },
+                {
+                    "date": 1680689258561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n router.delete('/:id', auth, saucesCtrl.deleteSauces);\n router.get('/:id', auth, saucesCtrl.getOneSauces);\n router.get('/', auth, saucesCtrl.getAllSauces);\n-router.post('/:id/like', auth, multer, Ctrl.likeSauces);\n+router.post('/:id/likes', auth, multer, likeCtrl.likeSauces);\n \n // router.get('/', auth, saucesCtrl.getAllSauces);\n // router.post('/', auth, multer, saucesCtrl.likeSauces);\n // router.post('/:id/like', auth, multer, saucesCtrl.createSauces);\n"
+                },
+                {
+                    "date": 1680689270047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n router.put('/:id', auth, multer, saucesCtrl.modifySauces);\n router.delete('/:id', auth, saucesCtrl.deleteSauces);\n router.get('/:id', auth, saucesCtrl.getOneSauces);\n router.get('/', auth, saucesCtrl.getAllSauces);\n-router.post('/:id/likes', auth, multer, likeCtrl.likeSauces);\n+router.post('/:id/like', auth, multer, likeCtrl.likeSauces);\n \n // router.get('/', auth, saucesCtrl.getAllSauces);\n // router.post('/', auth, multer, saucesCtrl.likeSauces);\n // router.post('/:id/like', auth, multer, saucesCtrl.createSauces);\n"
+                }
+            ],
+            "date": 1680520992728,
+            "name": "Commit-0",
+            "content": "const express = require('express');\nconst router = express.Router();\n\nconst auth = require('../middleware/auth');\nconst multer = require('../middleware/multer-config');\n\nconst saucesCtrl = require('../controllers/sauces');\n\nrouter.get('/', auth, saucesCtrl.getAllSauces);\nrouter.post('/', auth, multer, saucesCtrl.createSauces);\nrouter.get('/:id', auth, saucesCtrl.getOneSauces);\nrouter.put('/:id', auth, multer, saucesCtrl.modifySauces);\nrouter.delete('/:id', auth, saucesCtrl.deleteSauces);\ncon\n\nmodule.exports = router;"
+        }
+    ]
+}
